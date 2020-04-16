@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="39587" started-at="2020-03-11T12:35:34Z" finished-at="2020-03-11T12:36:14Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="39587" started-at="2020-03-11T12:35:34Z" finished-at="2020-03-11T12:36:14Z">
+      <class name="com.xm.qa.test.LoginTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.xm.qa.test.LoginTest@61dd025]" name="setup" is-config="true" duration-ms="21614" started-at="2020-03-11T18:05:34Z" finished-at="2020-03-11T18:05:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.xm.qa.test.LoginTest@61dd025]" name="login" duration-ms="17063" started-at="2020-03-11T18:05:56Z" finished-at="2020-03-11T18:06:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.xm.qa.test.LoginTest@61dd025]" name="quit" is-config="true" duration-ms="815" started-at="2020-03-11T18:06:13Z" finished-at="2020-03-11T18:06:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.xm.qa.test.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,1 @@
+{"uuid":"2dcc334b-9362-412f-a069-55dd362462bd","name":"com.xm.qa.test.LoginTest.quit","description":"","start":1583214241210,"stop":1583214241964,"children":["6df2d3ec-d556-4cd3-bf4c-beb05a54c67f"],"afters":[{"name":"quit","status":"passed","stage":"finished","description":"","start":1583214241210,"stop":1583214241964}]}
