@@ -32,12 +32,11 @@ public class LoginTest extends TestBase{
 	}
 	
 	@Test(description="Verify that user is able to login successfully")
-	public void login(){
-		loginPage.enterUserName(username);
-		loginPage.enterPassword(pwd);
-		loginPage.clickLoginBtn();
-		//Assert.assertTrue(loginPage.checkHomeTab());
+	public void login() throws InterruptedException{
+		loginPage.loginToApplication(username, pwd);
+		Assert.assertTrue(loginPage.checkHomeTab());
 		}
+	
 	@AfterMethod
 	public void quit() {
 		driver.quit();	

@@ -6,13 +6,16 @@ import org.testng.annotations.Test;
 import com.xm.qa.base.TestBase;
 import com.xm.qa.pages.AddGroupPage;
 import com.xm.qa.pages.GroupsPage;
+import com.xm.qa.pages.LoginPage;
 
 public class AddGroupTest extends TestBase{
 	
 	private GroupsPage groupsPage;
 	private AddGroupPage addGroupPage;
-	private LoginTest loginTest;
+	private LoginPage loginPage;
 	
+	String username = prop.getProperty("username");
+	String pwd = prop.getProperty("password");
 	String groupname = prop.getProperty("groupname");
 	String description = prop.getProperty("groupdescription");
 	String groupmember = prop.getProperty("groupmember");
@@ -23,14 +26,14 @@ public class AddGroupTest extends TestBase{
 	@BeforeMethod
 	public void setup() throws IOException {
 		intialization();
-		loginTest = new LoginTest();
+		loginPage = new LoginPage();
 		groupsPage = new GroupsPage();
 		addGroupPage = new AddGroupPage();
 		}
 	
 	@Test(description="To verify that user is able to add the group")
 	public void addGroup() throws InterruptedException {
-		loginTest.login();
+		loginPage.loginToApplication(username, pwd);;
 		groupsPage.clickGroupsLink();
 		groupsPage.clickAddGroupButton();
 		addGroupPage.enterGroupName(groupname);

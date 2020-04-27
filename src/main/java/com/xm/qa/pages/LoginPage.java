@@ -73,4 +73,13 @@ public class LoginPage extends TestBase{
 		log.info("Check whether user is able to view the Home tab");
 		return homeTab.isDisplayed();
 	}
+	public void loginToApplication(String userName, String pwd) throws InterruptedException {
+		log.info("Function to log into application");
+		username.sendKeys(userName);
+		password.sendKeys(pwd);
+		Thread.sleep(5000);
+		loginBtn.click();
+		
+		
+	}
 }

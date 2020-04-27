@@ -1,0 +1,1 @@
+{"uuid":"f05d1dc3-2cde-42e3-abd3-ded5e3e56936","name":"com.xm.qa.test.AddGroupTest.setup","description":"","start":1587988982426,"stop":1587988997159,"children":["15336eb2-b69a-4d06-b5c3-524f03dbfa69"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","start":1587988982428,"stop":1587988997158}]}

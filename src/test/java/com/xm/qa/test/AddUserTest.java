@@ -7,10 +7,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.xm.qa.base.TestBase;
 import com.xm.qa.pages.AddUserPage;
+import com.xm.qa.pages.LoginPage;
 import com.xm.qa.pages.UsersPage;
 
 public class AddUserTest extends TestBase{
 	
+	String username = prop.getProperty("username");
+	String pwd = prop.getProperty("password");
     String firstname = prop.getProperty("firstname");
     String lastname = prop.getProperty("lastname");
     String userid = prop.getProperty("userID");
@@ -20,20 +23,20 @@ public class AddUserTest extends TestBase{
 		super();
 	}
 	private UsersPage usersPage;
-	private LoginTest loginTest;
+	private LoginPage loginPage;
 	private AddUserPage addUserPage;
 	
 	@BeforeMethod
 	public void setup() throws IOException{
 		intialization();
 		usersPage = new UsersPage();
-		loginTest = new LoginTest();
+		loginPage = new LoginPage();
 		addUserPage = new AddUserPage();
 		}
 	
 	@Test(description= "Verify that user is added successfully")
 	public void addUser() throws InterruptedException {
-	loginTest.login();
+	loginPage.loginToApplication(username, pwd);
 	usersPage.clickUserslink();
 	usersPage.clickAddUserButton();
 	//adduser.clickLdap();

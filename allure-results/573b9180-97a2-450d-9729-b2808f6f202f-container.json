@@ -1,0 +1,1 @@
+{"uuid":"573b9180-97a2-450d-9729-b2808f6f202f","name":"com.xm.qa.test.UsersTest.setup","description":"","start":1587988179820,"stop":1587988197183,"children":["2fab025b-9bd1-4fab-9a5f-01ddb0b7d02d"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","start":1587988179821,"stop":1587988197180}]}
