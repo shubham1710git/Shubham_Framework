@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39587" started-at="2020-03-11T12:35:34Z" finished-at="2020-03-11T12:36:14Z">
+  <suite name="Default suite" duration-ms="27023" started-at="2020-04-26T17:24:12Z" finished-at="2020-04-26T17:24:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39587" started-at="2020-03-11T12:35:34Z" finished-at="2020-03-11T12:36:14Z">
+    <test name="Default test" duration-ms="27023" started-at="2020-04-26T17:24:12Z" finished-at="2020-04-26T17:24:39Z">
       <class name="com.xm.qa.test.LoginTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.xm.qa.test.LoginTest@61dd025]" name="setup" is-config="true" duration-ms="21614" started-at="2020-03-11T18:05:34Z" finished-at="2020-03-11T18:05:56Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.xm.qa.test.LoginTest@7f010382]" name="setup" is-config="true" duration-ms="24147" started-at="2020-04-26T22:54:12Z" finished-at="2020-04-26T22:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.xm.qa.test.LoginTest@61dd025]" name="login" duration-ms="17063" started-at="2020-03-11T18:05:56Z" finished-at="2020-03-11T18:06:13Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.xm.qa.test.LoginTest@7f010382]" name="login" duration-ms="473" started-at="2020-04-26T22:54:36Z" description="Verify that user is able to login successfully" finished-at="2020-04-26T22:54:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.xm.qa.test.LoginTest@61dd025]" name="quit" is-config="true" duration-ms="815" started-at="2020-03-11T18:06:13Z" finished-at="2020-03-11T18:06:14Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.xm.qa.test.LoginTest@7f010382]" name="quit" is-config="true" duration-ms="2327" started-at="2020-04-26T22:54:37Z" finished-at="2020-04-26T22:54:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->

@@ -6,8 +6,6 @@
       <class name="com.xm.qa.test.LoginTest">
         <methods>
           <include name="login"/>
-          <include name="setup"/>
-          <include name="quit"/>
         </methods>
       </class> <!-- com.xm.qa.test.LoginTest -->
     </classes>

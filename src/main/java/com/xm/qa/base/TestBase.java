@@ -6,10 +6,16 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import com.xm.qa.util.UtilPage;
 
 public class TestBase {
@@ -17,6 +23,7 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;  
 	// Create the constructor of TestBase class
+	Logger log = Logger.getLogger(TestBase.class);
 	
 	public TestBase() throws IOException{
 		try
@@ -35,7 +42,7 @@ public class TestBase {
     public static void intialization() {
     	String browserName = prop.getProperty("browser");
     	if(browserName.equals("chrome")) {
-    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\optimuslap16\\Desktop\\Automation\\chromedriver_win32"
+    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\optimuslap16\\Desktop\\Automation\\chromedriver_win32 (1)"
     			+ "\\chromedriver.exe");
     	driver = new ChromeDriver();
     	}
@@ -50,5 +57,23 @@ public class TestBase {
     	driver.manage().timeouts().implicitlyWait(UtilPage.Implicit_Wait, TimeUnit.SECONDS);
     	driver.get(prop.getProperty("url"));    		
     	}
+    public boolean isWebElementDisplayed(WebElement element) {
+		try {
+			WebDriverWait waiting = new WebDriverWait(driver, UtilPage.Implicit_Wait);
+			waiting.until(ExpectedConditions.visibilityOf(element));
+			return true;
+		} catch (Exception exception) {
+			return false;
+		}
+	}
+    public void pressEnterKey() {
+		try {
+			log.info("Press the enter key");
+			Actions action = new Actions(driver);
+			action.sendKeys(Keys.ENTER).build().perform();
+		} catch (Exception exception) {
+			Assert.fail("Assertion Failed: Unable to press the Enter key", exception);
+		}
+	}
     	
     }
