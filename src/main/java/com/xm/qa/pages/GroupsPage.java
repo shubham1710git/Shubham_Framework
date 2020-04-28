@@ -52,6 +52,15 @@ public class GroupsPage extends TestBase{
 	@FindBy(xpath = Constants.deleteGroupButton)
 	private WebElement deleteGroupButton;
 	
+	@FindBy(xpath = "//*[text()='Dynamic Teams I Supervise']")
+	private WebElement dynamicTeamPage;
+	
+	public boolean isDynamicTeamPageOpen() {
+		log.info("To check whether user is on Dynamic Page");
+		return dynamicTeamPage.isDisplayed();
+		
+	}
+	
 	public void clickGroupsLink() {
 		log.info("Click on Groups link");
 		groupsLink.click();
