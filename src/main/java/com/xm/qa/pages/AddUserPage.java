@@ -1,20 +1,17 @@
 package com.xm.qa.pages;
 
-import java.io.IOException;
-
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import com.xm.qa.base.TestBase;
-import com.xm.qa.constants.Constants;
+import com.xm.qa.util.UtilPage;
 
-public class AddUserPage extends TestBase{
+public class AddUserPage extends UtilPage{
 
 	Logger log = Logger.getLogger(AddUserPage.class);
 	
-	public AddUserPage() throws IOException{
-		PageFactory.initElements(driver, this);
+	public AddUserPage(WebDriver driver) {
+		super(driver);
 	}
 	@FindBy(xpath= Constants.ldapCheckbox) //The ldap checkbox
 	private WebElement ldapCheckbox;
@@ -53,49 +50,46 @@ public class AddUserPage extends TestBase{
 	
 	public void clickLdap() {
 		log.info("Click on Ldap checkbox to uncheck it");
-		ldapCheckbox.click();
+		clickWebElementFluently(ldapCheckbox);
 	}
 	public void enterFirstName(String firstname) {
 		log.info("Enter the first name");
-		firstName.sendKeys(firstname);
+		clickAndEnterText(firstName, firstname);
 	}
 	public void enterLastName(String lastname) {
 		log.info("Enter the lastname");
-		lastName.sendKeys(lastname);
+		clickAndEnterText(lastName, lastname);
 	}
 	public void enterUserId(String userid) {
 		log.info("Enter the UserID");
-		userID.sendKeys(userid);
+		clickAndEnterText(userID, userid);
 	}
 	public void enterPassword(String pass) {
 		log.info("Enter to set the password");
-		newPassword.sendKeys(pass);
+		clickAndEnterText(newPassword, pass);
 	}
 	public void enterConfirmPassword(String confirmpass) {
 		log.info("Enter to confirm the password");
-		confirmPassword.sendKeys(confirmpass);
+		clickAndEnterText(confirmPassword, confirmpass);
 	}
 	public void clickToDisableForcePasswordReset() {
 		log.info("Uncheck the Force Password Reset checkbox");
-		forceResetPassword.click();
+		clickWebElementFluently(forceResetPassword);
 	}
 	public void enterTextForRole() {
 		log.info("Enter the role");
-		roles.sendKeys("Full");
+		clickAndEnterText(roles, "Full");
 	}
 	public void pressEnterToSelect() {
 		log.info("Used to Enter");
 		pressEnterKey();
 	}
-	
 	public void clickAddButton() {
 		log.info("Click on Add Button");
-		addButton.click();
+		clickWebElementFluently(addButton);
 	}
 	public boolean isElementPresent() {
 		  log.info("Check whether the element is present");
 		  return isWebElementDisplayed(newUser);
 	  }
 }
-
-

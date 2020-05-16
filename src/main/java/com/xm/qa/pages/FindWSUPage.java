@@ -1,19 +1,16 @@
 package com.xm.qa.pages;
 
-import java.io.IOException;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import com.xm.qa.util.UtilPage;
 
-import com.xm.qa.base.TestBase;
-import com.xm.qa.constants.Constants;
-
-public class FindWSUPage extends TestBase{
+public class FindWSUPage extends UtilPage{
 	Logger log = Logger.getLogger(FindWSUPage.class);
 
-	public FindWSUPage() throws IOException {
-		PageFactory.initElements(driver, this);
+	public FindWSUPage(WebDriver driver){
+		super(driver);
 	}
 
 	@FindBy(xpath = Constants.allButton)
@@ -30,14 +27,14 @@ public class FindWSUPage extends TestBase{
     
     public void clickAllButton() {
     	log.info("Click on All button");
-    	allButton.click();
+    	clickWebElementFluently(allButton);
     }    
     public void enterUserId(String userID) {
     	log.info("Enter the userID you want to search");
-    	userTextField.sendKeys(userID);
+    	clickAndEnterText(userTextField, userID);
     }    
     public void clickFindButton() {
     	log.info("Click on Find button");
-    	findButton.click();
+    	clickWebElementFluently(findButton);
     }
 }

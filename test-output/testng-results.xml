@@ -2,21 +2,24 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40753" started-at="2020-04-27T12:03:02Z" finished-at="2020-04-27T12:03:43Z">
+  <suite name="Default suite" duration-ms="21286" started-at="2020-05-16T16:59:04Z" finished-at="2020-05-16T16:59:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40753" started-at="2020-04-27T12:03:02Z" finished-at="2020-04-27T12:03:43Z">
-      <class name="com.xm.qa.test.AddGroupTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.xm.qa.test.AddGroupTest@4313f5bc]" name="setup" is-config="true" duration-ms="14896" started-at="2020-04-27T17:33:02Z" finished-at="2020-04-27T17:33:17Z">
+    <test name="Default test" duration-ms="21286" started-at="2020-05-16T16:59:04Z" finished-at="2020-05-16T16:59:26Z">
+      <class name="com.xm.qa.test.LoginTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.xm.qa.test.LoginTest@6ef888f6]" name="setup" is-config="true" duration-ms="20298" started-at="2020-05-16T22:29:04Z" finished-at="2020-05-16T22:29:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="addGroup()[pri:0, instance:com.xm.qa.test.AddGroupTest@4313f5bc]" name="addGroup" duration-ms="25769" started-at="2020-04-27T17:33:17Z" description="To verify that user is able to add the group" finished-at="2020-04-27T17:33:43Z">
+        <test-method status="FAIL" signature="login()[pri:0, instance:com.xm.qa.test.LoginTest@6ef888f6]" name="login" duration-ms="115" started-at="2020-05-16T22:29:25Z" description="Verify that user is able to login successfully" finished-at="2020-05-16T22:29:25Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at com.xm.qa.pages.AddGroupPage.enterGroupName(AddGroupPage.java:44)
-	at com.xm.qa.test.AddGroupTest.addGroup(AddGroupTest.java:40)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.sendKeys(Unknown Source)
+	at com.xm.qa.pages.LoginPage.loginToApplication(LoginPage.java:84)
+	at com.xm.qa.test.LoginTest.login(LoginTest.java:36)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -46,8 +49,12 @@
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addGroup -->
-      </class> <!-- com.xm.qa.test.AddGroupTest -->
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.xm.qa.test.LoginTest@6ef888f6]" name="afterMethod" is-config="true" duration-ms="811" started-at="2020-05-16T22:29:25Z" finished-at="2020-05-16T22:29:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.xm.qa.test.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

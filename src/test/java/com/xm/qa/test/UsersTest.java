@@ -18,13 +18,13 @@ public class UsersTest extends TestBase{
 	private UsersPage usersPage;
 	private LoginPage loginPage;
 
-		@BeforeMethod
-	    public void setup() throws IOException {
-		intialization();
-		usersPage = new UsersPage();
-		loginPage = new LoginPage();
+		//@BeforeMethod
+	    //public void setup() throws IOException {
+		//intialization();
+		//usersPage = new UsersPage();
+		//loginPage = new LoginPage();
 		
-	}
+	//}
 
 	@Test(description="Verify that user is able to navigate to each buttons on the Users tab")
 	public void clickUsers() throws InterruptedException {

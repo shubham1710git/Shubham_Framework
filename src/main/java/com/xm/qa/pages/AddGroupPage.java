@@ -1,19 +1,16 @@
 package com.xm.qa.pages;
 
-import java.io.IOException;
-
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import com.xm.qa.util.UtilPage;;
 
-import com.xm.qa.base.TestBase;
-import com.xm.qa.constants.Constants;
-
-public class AddGroupPage extends TestBase{
+public class AddGroupPage extends UtilPage{
 
 	Logger log = Logger.getLogger(AddGroupPage.class);
-	public AddGroupPage() throws IOException {
-		super();
+	public AddGroupPage(WebDriver driver){
+		super(driver);
 	}
 	
 	@FindBy(xpath = Constants.groupName)
@@ -41,15 +38,16 @@ public class AddGroupPage extends TestBase{
 
 	public void enterGroupName(String grpName) {
 		log.info("Enter the group name");
-		groupName.sendKeys(grpName);
+		clickAndEnterText(groupName, grpName);
+		
 	}    
 	public void enterGroupDescription(String grpDescr) {
 		log.info("Enter the group description");
-		descriptionField.sendKeys(grpDescr);
+		clickAndEnterText(descriptionField, grpDescr);
 	}
 	public void enterMember(String grpmember) {
 		log.info("Enter the name of the user");
-		recipientSection.sendKeys(grpmember);
+		clickAndEnterText(recipientSection, grpmember);
 	}
 	public void enter() {
 		log.info("Click to enter");
@@ -57,10 +55,10 @@ public class AddGroupPage extends TestBase{
 	}
 	public void clickCreateAnotherGroup() {
 		log.info("Click on Create Another Group checkbox");
-		crossIcon.click();
+		clickWebElementFluently(crossIcon);
 	}
 	public void clickAddButton() {
 		log.info("Click on Add button to add the group");
-		saveButton.click();
+		clickWebElementFluently(saveButton);
 		}
 	}

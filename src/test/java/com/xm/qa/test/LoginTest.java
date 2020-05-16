@@ -10,7 +10,7 @@ import com.xm.qa.base.TestBase;
 import com.xm.qa.pages.LoginPage;
 
 public class LoginTest extends TestBase{
-	LoginPage loginPage;
+	LoginPage loginPage = new LoginPage(getDriver());
 	String username = prop.getProperty("username");
 	String pwd = prop.getProperty("password");
 
@@ -25,11 +25,11 @@ public class LoginTest extends TestBase{
 		// super() will initialize the variables of the TestBase class.
 		// The properties will be initialize and the data will be loaded from the config.properties.	
 	}
-	@BeforeMethod
-	public void setup() throws IOException {
-		intialization();
-		loginPage = new LoginPage();
-	}
+	//@BeforeMethod
+	//public void setup() throws IOException {
+		//intialization();
+		//loginPage = new LoginPage();
+	//}
 	
 	@Test(description="Verify that user is able to login successfully")
 	public void login() throws InterruptedException{
@@ -37,8 +37,8 @@ public class LoginTest extends TestBase{
 		Assert.assertTrue(loginPage.checkHomeTab());
 		}
 	
-	@AfterMethod
-	public void quit() {
-		driver.quit();	
-	}
+	//@AfterMethod
+	//public void quit() {
+		//driver.quit();	
+	//}
 }

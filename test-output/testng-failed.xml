@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.xm.qa.test.AddGroupTest">
+      <class name="com.xm.qa.test.LoginTest">
         <methods>
+          <include name="login"/>
           <include name="setup"/>
-          <include name="addGroup"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.xm.qa.test.AddGroupTest -->
+      </class> <!-- com.xm.qa.test.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

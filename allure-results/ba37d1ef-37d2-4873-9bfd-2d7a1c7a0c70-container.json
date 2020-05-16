@@ -1,0 +1,1 @@
+{"uuid":"ba37d1ef-37d2-4873-9bfd-2d7a1c7a0c70","name":"com.xm.qa.base.TestBase.setup","description":"","start":1589647308173,"stop":1589647323554,"children":["96fd7116-15f5-4af4-918f-f6962894ad97"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","start":1589647308174,"stop":1589647323552}]}

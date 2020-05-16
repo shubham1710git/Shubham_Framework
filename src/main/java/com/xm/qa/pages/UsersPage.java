@@ -1,20 +1,16 @@
 package com.xm.qa.pages;
 
-import java.io.IOException;
-
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import com.xm.qa.util.UtilPage;
 
-import com.xm.qa.base.TestBase;
-import com.xm.qa.constants.Constants;
-
-public class UsersPage extends TestBase{
+public class UsersPage extends UtilPage{
 	Logger log = Logger.getLogger(UsersPage.class);
 
-	public UsersPage() throws IOException{
-		PageFactory.initElements(driver, this);
+	public UsersPage(WebDriver driver){
+		super(driver);
 	}
 	   @FindBy(xpath= Constants.userLink)
 	   private WebElement userLink;
@@ -57,63 +53,62 @@ public class UsersPage extends TestBase{
 	   
 	   @FindBy(xpath= Constants.chickenDelete)
 	   private WebElement chickenDelete;
-	   
+	  
 	   @FindBy(xpath= Constants.chickenCancelButton)
 	   private WebElement chickenCancelButton;
 	   
 	   public void clickSearchButton() {
 			  log.info("Click on Search button");
-			  userSearchButton.click();
+			  clickWebElementFluently(userSearchButton);
 		  }
 		  public void clickUserIsuperviseButton() {
 			  log.info("Click on User I Supervise");
-			  userISuperviseButton.click();
+			  clickWebElementFluently(userISuperviseButton);
 		  }
 		  public void clickAllUserButtonbutton() {
 			  log.info("Click on All User");
-			  allUsersButton.click();
+			  clickWebElementFluently(allUsersButton);
 		  }
 		  public void clickAddUserButton() {
 			  log.info("Click on Add User button");
-			  userAddButton.click();
+			  clickWebElementFluently(userAddButton);
 		  }
 		  public void clickExport() {
 			  log.info("Click on Export button");
-			  exportButton.click();
+			  clickWebElementFluently(exportButton);
 		  }
 		  public void clickUserslink() {
 			  log.info("Click on Users link to see the functionalities");
-			  userLink.click();  
+			  clickWebElementFluently(userLink);
 		  }
 		  public void addWebServiceUser() {
 			  log.info("Add web service user");
 			  addWebServiceUser.click();
+			  clickWebElementFluently(addWebServiceUser);
 		  }
 		  public void findWebServiceUser() {
 			  log.info("Find web service users");
-			  searchWebServiceUsersLink.click();
+			  clickWebElementFluently(searchWebServiceUsersLink);
 		  }
 		  public void clickCheckbox() {
 			  log.info("Click on checkbox beside the user to delete it");
-			  deleteUser.click();
+			  clickWebElementFluently(deleteUser);
 		  }
 		  public void clickDeleteButton() {
 			  log.info("Click on Delete button");
-			  deleteButton.click();
+			  clickWebElementFluently(deleteButton);
 		  }
 		  public void clickChickenDeleteButton() {
 			  log.info("Click on Chicken Delete button to confirm the deletion of the user");
-			  chickenDelete.click();
+			  clickWebElementFluently(chickenDelete);
 		  }
 		  public void clickChickenCancelButton() {
 			  log.info("Click to Cancel the Delete process");
-			  chickenCancelButton.click();
+			  clickWebElementFluently(chickenCancelButton);
 		  }
 		  public boolean elementPresent() {
 			  log.info("Check whether the element is present");
-			  return isWebElementDisplayed(uDeletedUser);
+			  //return isWebElementDisplayed(uDeletedUser);
+			  return isWebElementPresent(uDeletedUser);
 		  }
-
-	  
-
 }

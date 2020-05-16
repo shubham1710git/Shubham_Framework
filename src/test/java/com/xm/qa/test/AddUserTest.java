@@ -26,13 +26,13 @@ public class AddUserTest extends TestBase{
 	private LoginPage loginPage;
 	private AddUserPage addUserPage;
 	
-	@BeforeMethod
-	public void setup() throws IOException{
-		intialization();
-		usersPage = new UsersPage();
-		loginPage = new LoginPage();
-		addUserPage = new AddUserPage();
-		}
+	//@BeforeMethod
+	//public void setup() throws IOException{
+		//intialization();
+		//usersPage = new UsersPage();
+		//loginPage = new LoginPage();
+		//addUserPage = new AddUserPage();
+	//	}
 	
 	@Test(description= "Verify that user is added successfully")
 	public void addUser() throws InterruptedException {

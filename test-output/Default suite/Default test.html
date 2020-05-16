@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 27 17:33:02 IST 2020</td>
+<td>Started on:</td><td>Sat May 16 22:29:04 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>40 seconds (40753 ms)</td>
+<tr><td>Total time:</td><td>21 seconds (21286 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,10 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.xm.qa.test.AddGroupTest.addGroup()'><b>addGroup</b><br>Test class: com.xm.qa.test.AddGroupTest<br>Test method: To verify that user is able to add the group</td>
+<td title='com.xm.qa.test.LoginTest.login()'><b>login</b><br>Test class: com.xm.qa.test.LoginTest<br>Test method: Verify that user is able to login successfully</td>
 <td><div><pre>java.lang.NullPointerException
-	at com.xm.qa.pages.AddGroupPage.enterGroupName(AddGroupPage.java:44)
-	at com.xm.qa.test.AddGroupTest.addGroup(AddGroupTest.java:40)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.sendKeys(Unknown Source)
+	at com.xm.qa.pages.LoginPage.loginToApplication(LoginPage.java:84)
+	at com.xm.qa.test.LoginTest.login(LoginTest.java:36)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -103,10 +106,13 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1238616099", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1238616099'><pre>java.lang.NullPointerException
-	at com.xm.qa.pages.AddGroupPage.enterGroupName(AddGroupPage.java:44)
-	at com.xm.qa.test.AddGroupTest.addGroup(AddGroupTest.java:40)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1043358826", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1043358826'><pre>java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.sendKeys(Unknown Source)
+	at com.xm.qa.pages.LoginPage.loginToApplication(LoginPage.java:84)
+	at com.xm.qa.test.LoginTest.login(LoginTest.java:36)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -132,8 +138,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>25</td>
-<td>com.xm.qa.test.AddGroupTest@4313f5bc</td></tr>
+<td>0</td>
+<td>com.xm.qa.test.LoginTest@6ef888f6</td></tr>
 </table><p>
 </body>
 </html>

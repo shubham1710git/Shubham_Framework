@@ -1,21 +1,17 @@
 package com.xm.qa.pages;
 
-import java.io.IOException;
-
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import com.xm.qa.util.UtilPage;
 
-import com.xm.qa.base.TestBase;
-import com.xm.qa.constants.Constants;
-
-public class GroupsPage extends TestBase{
+public class GroupsPage extends UtilPage{
 	Logger log = Logger.getLogger(GroupsPage.class);
 
-	public GroupsPage() throws IOException{
-		PageFactory.initElements(driver, this);
-}
+	public GroupsPage(WebDriver driver) {
+		super(driver);
+	}
 	@FindBy(xpath = Constants.groupsLink)
 	private WebElement groupsLink;
 	
@@ -57,56 +53,56 @@ public class GroupsPage extends TestBase{
 	
 	public boolean isDynamicTeamPageOpen() {
 		log.info("To check whether user is on Dynamic Page");
-		return dynamicTeamPage.isDisplayed();
-		
-	}
-	
+		//return dynamicTeamPage.isDisplayed();
+		return isWebElementPresent(dynamicTeamPage);		
+	}	
 	public void clickGroupsLink() {
 		log.info("Click on Groups link");
-		groupsLink.click();
+		clickWebElementFluently(groupsLink);
 	}
 	public void clickGroupPerformanceLink() {
 		log.info("Click on this link to view the Group Performance link");
-		groupsPerformance.click();
+		clickWebElementFluently(groupsPerformance);
 	}
 	public void clickWhosOnCallLink() {
 		log.info("Click on this link to view the Who's on Call Data");
-		whosOnCall.click();
+		clickWebElementFluently(whosOnCall);
 	}
 	public void clickHistoricalOnCallLink() {
 		log.info("Click on this link to view the Historical On Call Data");
-		historicalOnCall.click();
+		clickWebElementFluently(historicalOnCall);
 	}
 	public void clickFindDynamicTeamLink() {
 		log.info("Click on this link to find the dynamic team");
-		findDynamicTeams.click();
+		clickWebElementFluently(findDynamicTeams);
 	}
 	public void clickDynamicTeamsLink() {
 		log.info("Click on this link to add and view the dynamic team");
-		dynamicTeams.click();
+		clickWebElementFluently(dynamicTeams);
 	}
 	public void clickDeleteButton() {
 		log.info("Click on Delete button to delete the group");
 		deleteGroupButton.click();
+		clickWebElementFluently(deleteGroupButton);
 	}
 	public void clickSearchButton() {
 		log.info("Click on Search button");
-		searchButton.click();
+		clickWebElementFluently(searchButton);
 	}
 	public void clickGroupsISuperviseButton() {
 		log.info("Click on Groups I Supervise Button");
-		groupsISuperviseButton.click();
+		clickWebElementFluently(groupsISuperviseButton);
 	}
 	public void clickAllGroupsButton() {
 		log.info("Click on All Group Button");
-		allGroupsButton.click();
+		clickWebElementFluently(allGroupsButton);
 	}
 	public void clickAddGroupButton() {
 		log.info("Click on Add Group button");
-		addGroupButton.click();
+		clickWebElementFluently(addGroupButton);
 	}
 	public void clickExportButton() {
 		log.info("Click on Export button");
-		exportGroupsButton.click();
+		clickWebElementFluently(exportGroupsButton);
 	}
 		}

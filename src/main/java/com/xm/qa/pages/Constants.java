@@ -1,9 +1,11 @@
-package com.xm.qa.constants;
+package com.xm.qa.pages;
 
-public class Constants {
+public class Constants{
 	
-	//x-path for LoginPage
-	
+
+
+//x-path for LoginPage
+
 	public final static String logo = "//*[@id='logo']"; 
 	public final static String newsAndUpdatesLink = "//a[text()='News & Updates']";
 	public final static String supportLink = "//a[text()='Support']";
@@ -23,7 +25,7 @@ public class Constants {
 	public final static String cancelButton = "//div[@id='cancelButton']";
 	public final static String crossIcon = "//div/i[@class='icon-cancel window-close']";
 	
-    //x-path for AddUserPage
+  //x-path for AddUserPage
 	
 	public final static String ldapCheckbox = "//*[@id='useLDAP']";
 	public final static String firstName = "//*[@id='firstName']";

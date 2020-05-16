@@ -1,0 +1,1 @@
+{"uuid":"ffbf3234-5b7a-41fa-902f-43c2736f67f4","name":"com.xm.qa.base.TestBase.afterMethod","description":"","start":1589647343958,"stop":1589647344754,"children":["96fd7116-15f5-4af4-918f-f6962894ad97"],"afters":[{"name":"afterMethod","status":"passed","stage":"finished","description":"","start":1589647343959,"stop":1589647344754}]}
